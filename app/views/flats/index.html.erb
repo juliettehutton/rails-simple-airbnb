@@ -2,7 +2,11 @@
 
 <ul>
   <% @flats.each do |flat| %>
-    <li><%= link_to flat.name, flat_path(flat) %></li>
+    <li>
+      <div> <%= link_to flat.name, flat_path(flat) %> </div>
+      <div> <%= flat.description %> | <%= flat.address %> </div>
+      <div> <%= flat.price_per_night %>$ | <%= flat.number_of_guests %> guests </div>
+    </li>
   <% end %>
 </ul>
 

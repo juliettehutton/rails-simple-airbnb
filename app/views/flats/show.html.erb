@@ -1,0 +1,12 @@
+<h2><%= @flat.name %></h2>
+<p><%= @flat.description %></p>
+<p><%= @flat.price_per_night %>$ per night | <%= @flat.number_of_guests %> guests</p>
+
+<%= link_to "Back to the flats", flats_path %>
+
+<%= link_to "Edit the flat", edit_flat_path(@flat) %>
+
+<%= link_to "Delete the flat",
+  flat_path(@flat),
+  data: {turbo_method: :delete, turbo_confirm: "Do you really want to delete this flat?"}
+%>
